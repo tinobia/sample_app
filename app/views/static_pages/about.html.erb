@@ -1,0 +1,10 @@
+<% provide(:title, (t ".about")) %>
+<h1><%=t(".about")%></h1>
+<p>)
+  <%=t(".sentence1_html",
+    :ror_about_links => link_to(t(".ror_about_href"), "http://www.railstutorial.org/"),
+    :ror_about2_links => link_to(t(".ror_about2_href"), "http://www.railstutorial.org/book"),
+    :ror_about3_links => link_to(t(".ror_about3_href"), "http://screencasts.railstutorial.org/"),
+    :ror_about4_links => link_to(t(".ror_about4_href"), "http://rubyonrails.org/"))%></a>
+  <%=t(".sentence2_html")%>
+</p>

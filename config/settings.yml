@@ -1,0 +1,6 @@
+name:
+  maximum: 50
+email:
+  maximum: 50
+password:
+  maximum: 6
