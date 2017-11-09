@@ -4,3 +4,4 @@ class ApplicationController < ActionController::Base
     render html: "hello, Trung Map hahahaha hihihihi hehehehe hoohohoho!"
   end
 end
+ 	
