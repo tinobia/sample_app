@@ -31,3 +31,55 @@
 
 en:
   hello: "Hello world"
+  title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      test: "Welcome to the Sample App"
+      home: "Home"
+      sentence_html: "This is the home page for the %{ror_links} sample application."
+      ror_href: "Ruby on Rails Tutorial"
+      signup: "Sign up now!"
+    help:
+      help: "Help"
+      sentence1_html: "Get help on the Ruby on Rails Tutorial at the %{ror_help_links} "
+      ror_help_href: "Rails Tutorial help page."
+      sentence2_html: "To get help on this sample app, see the %{ror_help_links} book."
+      ror_help2_href: "Ruby on Rails Tutorial"
+    about:
+      about: "About"
+      sentence1_html: "The %{ror_about_links} is a
+                      %{ror_about2_links} and %{ror_about3_links} to teach web development with
+                      %{ror_about4_links}"
+      sentence2_html: This is the sample application for the tutorial.
+      ror_about_href: "Ruby on Rails Tutorial"
+      ror_about2_href: "book"
+      ror_about3_href: "screencast series"
+      ror_about4_href: "Ruby on Rails"
+    contact:
+      contact: "Contact"
+      sentence_html: "Contact the Ruby on Rails Tutorial about the sample app at the
+       %{cont_links}"
+      contact_href: "contact page."
+  layouts:
+    header:
+      text1: "Sample App"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      about: "About"
+      contact: "Contact"
+      sentence_html: "The %{ror_links} by %{mcHart_links}"
+      ror_href: "Ruby on Rails Tutorial "
+      mcHart_href: "Michael Hartl"
+      news_html: "%{news_links}"
+      news_href: News
+  users:
+    new:
+      signup: "Sign up"
+      confirm: "Confirmation"
+      button: "Create my account"
+  controllers:
+    users_controller:
+      failed: "Khong tim thay nguoi dung "
+      success: "Chao mung den voi SA"
