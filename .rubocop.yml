@@ -168,6 +168,7 @@ Layout/CaseIndentation:
 #     - nested
 #     - compact
 
+
 Style/ClassCheck:
   EnforcedStyle: is_a?
   SupportedStyles:
