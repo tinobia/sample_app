@@ -48,6 +48,14 @@ en:
       mcHart_href: "Michael Hartl"
       news_html: "%{news_links}"
       news_href: News
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      greeting: "Hi"
+      sentence: "Welcome to the Sample App! Click on the link below to activate your account"
+      activate: "Activate"
+    password_reset:
+      title: "User#password_reset"
   users:
     _user:
       confirm: "You sure ?"
@@ -75,6 +83,14 @@ en:
       updated: "Profile Updated"
       login: "Please log in."
       deleted: "User deleted"
+      alert: "Please check your email to activate your account."
       failed_to_delete: "Failed to delete the user"
     sessions_controller:
       danger: "Invalid email/password combination"
+      unactivated:  "Account not activated. Check your email for the activation link."
+    account_activations_controller:
+      activated: "Account activated!"
+      failed_to_activate: "Invalid activation link"
+  mailers:
+    greeting: "Hi"
+    subject: "Account activation"

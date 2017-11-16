@@ -17,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      redirect_to @user
-      flash[:success] = t "controllers.users_controller.success"
+      @user.send_activation_email
+      flash[:info] = t "controllers.users_controller.alert"
+      redirect_to root_url
     else
       render :new
     end
@@ -62,12 +62,12 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find_by id: params[:id]
     return if current_user? @user
-    redirect_to(root_url)
+    redirect_to root_url
   end
 
   def admin_user
     return if current_user.admin?
-    redirect_to(root_url)
+    redirect_to root_urln
   end
 
   def find_user
