@@ -53,9 +53,14 @@ en:
       title: "Sample App"
       greeting: "Hi"
       sentence: "Welcome to the Sample App! Click on the link below to activate your account"
-      activate: "Activate"
+      acti: "Activate"
     password_reset:
-      title: "User#password_reset"
+      title: "Password reset"
+      sentence: "To reset your password click the link below:"
+      rs_password: "Reset password"
+      alert1: "This link will expire in two hours"
+      alert2: "If you did not request your password to be reset, please ignore this email
+        and your password will stay as it is."
   users:
     _user:
       confirm: "You sure ?"
@@ -76,10 +81,11 @@ en:
       signup: "Sign up now!"
       new: "New user?"
       remember: "Remember me on this computer"
+      forgot_password: " (Forgot password?)"
   controllers:
     users_controller:
       failed: "Not found the user"
-      success: "Chao mung den voi SA"
+      success: "Welcome to my team :))"
       updated: "Profile Updated"
       login: "Please log in."
       deleted: "User deleted"
@@ -91,6 +97,21 @@ en:
     account_activations_controller:
       activated: "Account activated!"
       failed_to_activate: "Invalid activation link"
+    password_resets_controller:
+      cant_be_empty: "can't be empty"
+      reseted: "Password has been reset."
+      invalid: "Password isn't valid "
+      not_found_email: "Email address not found"
+      alert: "Email send with password reset instructions"
+      expired: "Password reset has expired"
   mailers:
     greeting: "Hi"
-    subject: "Account activation"
+    subject_acc: "Account activation"
+    subject_pass: "Password reset"
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+    edit:
+      title: "Reset password"
+      button: "Update password"
