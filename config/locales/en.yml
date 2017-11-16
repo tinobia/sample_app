@@ -78,10 +78,19 @@ en:
       title: All users
     show:
       micropost: "Microposts %{micro_size}"
+
     follow:
       button: "Follow"
     unfollow:
       button: "Unfollow"
+    show:
+      micropost: Microposts %{micropost_size}
+    show_follow:
+      my_prof: "view my profile"
+      micropost: "Microposts :"
+    stats:
+      following: "following"
+      followers: "followers"
   sessions:
     new:
       login: "Log in"
@@ -115,6 +124,8 @@ en:
       created: "Micropost created"
       deleted: "Micropost deleted"
       failed_to_delete: "Failed to delete"
+    relationships_controller:
+      not_found: "Not found the user"
   mailers:
     greeting: "Hi"
     subject_acc: "Account activation"
@@ -145,3 +156,7 @@ en:
   models:
     micropost:
       error: "should be less than 5MB"
+  models:
+    micropost:
+      error: "should be less than 5MB"
+

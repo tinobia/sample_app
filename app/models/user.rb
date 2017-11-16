@@ -64,7 +64,9 @@ class User < ApplicationRecord
   end
 
   def feed
-    Micropost.feed_user id
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Micropost.another_sort.feed_users(following_ids, id)
   end
 
   def follow other_user
