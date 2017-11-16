@@ -1,0 +1,15 @@
+<footer class="footer">
+  <small>
+    <%= t(".sentence_html",
+     ror_links: link_to(t(".ror_href"),"http://www.railstutorial.org/"),
+     mcHart_links: link_to(t(".mcHart_href"),"http://www.michaelhartl.com/")) %></a>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t(".about"), about_path %></li>
+      <li><%= link_to t(".contact"), contact_path %></li>
+      <li><%= t(".news_html", :news_links => link_to(t(".news_href"),
+        "https://www.railstutorial.org/")) %></a></li>
+    </ul>
+  </nav>
+</footer>

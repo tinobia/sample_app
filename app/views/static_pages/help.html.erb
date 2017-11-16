@@ -1,8 +1,8 @@
-<% provide(:title, (t ".help")) %>
+<% provide :title, (t ".help") %>
 <h1><%= t ".help"%></h1>
 <p>
-  <%= t(".sentence1_html", :ror_help_links => link_to(t(".ror_help_href"),
+  <%= t(".sentence1_html", ror_help_links: link_to(t(".ror_help_href"),
   "https://www.railstutorial.org/#help")) %></a>
-  <%= t(".sentence2_html", :ror_help_links => link_to(t(".ror_help2_href"),
+  <%= t(".sentence2_html", ror_help_links: link_to(t(".ror_help2_href"),
   "https://www.railstutorial.org/book")) %></a>
 </p>
