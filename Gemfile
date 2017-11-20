@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Install for config setting
-gem 'config'
+gem "config"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "~> 5.1.4"
 #install to use bcrypt
@@ -25,6 +25,7 @@ gem "uglifier", ">= 1.3.0"
 # gem "therubyracer", platforms: :ruby
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
+gem "jquery-rails"
 # Turbolin`ks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
