@@ -1,6 +1,6 @@
 <% provide :title, t(".contact") %>
-<h1><%=t(".contact")%></h1>
+<h1><%= t(".contact") %></h1>
 <p>
-  <%=t(".sentence_html", :cont_links => link_to(t(".contact_href"),
-   "http://www.railstutorial.org/contact")) %>
+  <%= t(".sentence_html", :cont_links => link_to(t(".contact_href"),
+   Settings.contact.url)) %>
 </p>

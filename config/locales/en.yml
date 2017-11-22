@@ -49,18 +49,32 @@ en:
       news_html: "%{news_links}"
       news_href: News
   users:
+    _user:
+      confirm: "You sure ?"
     new:
       signup: "Sign up"
       confirm: "Confirmation"
       button: "Create my account"
+    edit:
+      title: "Edit Users"
+      text: "Update your profile"
+      button: "Save Changes"
+      change: Change
+    index:
+      title: All users
   sessions:
     new:
       login: "Log in"
       signup: "Sign up now!"
       new: "New user?"
+      remember: "Remember me on this computer"
   controllers:
     users_controller:
-      failed: "Khong tim thay nguoi dung "
+      failed: "Not found the user"
       success: "Chao mung den voi SA"
+      updated: "Profile Updated"
+      login: "Please log in."
+      deleted: "User deleted"
+      failed_to_delete: "Failed to delete the user"
     sessions_controller:
       danger: "Invalid email/password combination"
