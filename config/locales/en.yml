@@ -58,6 +58,7 @@ en:
       login: "Log in"
       signup: "Sign up now!"
       new: "New user?"
+      remember: "Remember me on this computer"
   controllers:
     users_controller:
       failed: "Khong tim thay nguoi dung "

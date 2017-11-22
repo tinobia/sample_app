@@ -3,8 +3,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
+    login_remember user
+  end
+
+  def login_remember user
     if user && user.authenticate(params[:session][:password])
       log_in user
+      params[:session][:remember_me] == Settings.session.remem.to_s ? remember(user) : forget(user)
       redirect_to user
     else
       flash.now[:danger] = t("controllers.sessions_controller.danger")
@@ -13,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
