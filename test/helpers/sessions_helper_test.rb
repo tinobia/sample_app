@@ -11,7 +11,7 @@ class SessionsHelperTest < ActionView::TestCase
   end
 
   test "current_user returns nil when remember digest is wrong" do
-    @user.update_attributes :remember_digest, User.digest(User.new_token)
+    @user.update_attribute :remember_digest, User.digest(User.new_token)
     assert_nil current_user
   end
 end
