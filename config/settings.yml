@@ -10,3 +10,5 @@ session:
   remem: 1
 contact:
   url: http://www.railstutorial.org/contact
+password_reset_time:
+  max_time: 2

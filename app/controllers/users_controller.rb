@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 
   def admin_user
     return if current_user.admin?
-    redirect_to root_urln
+    redirect_to root_url
   end
 
   def find_user
