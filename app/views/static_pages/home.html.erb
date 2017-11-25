@@ -1,10 +1,29 @@
-<div class="center jumbotron">
-  <h1><%= t".test" %></h1>
-  <h2>
-     <%= t(".sentence_html", ror_links: link_to(t(".ror_href"), "https://www.railstutorial.org")) %>
-  </h2>
-  <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<%= link_to image_tag("shin.jpg", alt: "Rails logo"),
-            "http://rubyonrails.org/" %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t".mc_feed" %></h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t".test" %></h1>
+    <h2>
+       <%= t(".sentence_html", ror_links: link_to(t(".ror_href"), "https://www.railstutorial.org")) %>
+    </h2>
+    <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag("shin.jpg", alt: "Rails logo"), "http://rubyonrails.org/" %>
+<% end %>
 
