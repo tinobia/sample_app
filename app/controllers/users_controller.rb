@@ -2,14 +2,14 @@ class UsersController < ApplicationController
   before_action :logged_in_user, except: %i(show new create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
-  before_action :find_user, only: %i(show destroy)
+  before_action :find_user, only: %i(show destroy following followers)
 
   def index
     @users = User.paginate(page: params[:page])
   end
 
   def show
-    @microposts = @user.microposts.another_sort.paginate(page: params[:page])
+    @microposts = @user.microposts.another_sort.paginate page: params[:page]
   end
 
   def new
@@ -45,6 +45,18 @@ class UsersController < ApplicationController
       flash[:danger] = t "controllers.users_controller.failed_to_delete"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = "Following"
+    @users = @user.following.paginate(page: params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @users = @user.followers.paginate(page: params[:page])
+    render "show_follow"
   end
 
   private

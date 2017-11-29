@@ -1,11 +1,11 @@
 class Micropost < ApplicationRecord
   belongs_to :user
-  scope :another_sort, ->{order(created_at: :desc)}
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: Settings.content.maximum}
   validate  :picture_size
-  scope :feed_user, ->(id){where("user_id = ?", id)}
+  scope :another_sort, ->{order(created_at: :desc)}
+  scope :feed_users, ->(following_ids, id){where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)}
 
   private
 
